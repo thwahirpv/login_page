@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    <link rel="stylesheet" href="{% static './css/bootstrap.css' %}">
+
+</head>
+<body class="bg-primary-subtle">
+
+
+    <div class="container-fluid d-flex justify-content-center align-items-center"
+    style="height: 100vh;">
+        <div class="h-50">
+            <ul class="list-group list-group-flush overflow-scroll h-100">
+                {% for movie in movies %}
+                <li id="" class="list-group-item">
+                    <p>Title: {{movie.title}}</p>
+                    <p>Year: {{movie.year}}</p>
+                    <p>Rate: {{movie.rate}}</p>
+                </li>
+                {% endfor %}
+              </ul>
+        </div>   
+    </div>
+    
+    <script src="{% static './js/bootstrap.min.js' %}"></script>
+</body>
+</html>

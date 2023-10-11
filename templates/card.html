@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <title>Document</title>
+</head>
+<body class="bg-dark">
+ 
+    <div class="container-fluid d-flex justify-content-center align-items-center">
+
+        <div class="row row-gap-3">
+            
+            {% for item in data %}
+            <div class="col-12 col-md-4">
+                <div class="card mx-auto" style="width: 18rem;">
+                  <img src="{{ item.image }}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">{{ item.title }}</h5>
+                  </div>
+                </div>
+            </div> 
+            {% endfor %}
+         
+    </div>
+
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>
